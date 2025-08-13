@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 交互模式 3D 可视化</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="three.min.js"></script>
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="scenarios">情景</button>
+            <button class="tab-btn" data-tab="modes">模式</button>
+        </div>
+        
+        <div class="controls" id="modes-panel">
+            <button class="mode-btn" data-mode="creation">创作生成模式</button>
+            <button class="mode-btn" data-mode="summary">总结整合模式</button>
+            <button class="mode-btn" data-mode="analysis">分析研究模式</button>
+            <button class="mode-btn" data-mode="inspiration">创意启发模式</button>
+            <button class="mode-btn" data-mode="learning">提问学习模式</button>
+            <button class="mode-btn" data-mode="translation">翻译解读模式</button>
+            <button class="mode-btn" data-mode="imitation">模仿参考模式</button>
+            <button class="mode-btn" data-mode="reflection">深思反问模式</button>
+        </div>
+        
+        <div class="controls" id="scenarios-panel" style="display: none;">
+            <button class="scenario-btn" data-mode="creation">情景一</button>
+            <button class="scenario-btn" data-mode="summary">情景二</button>
+            <button class="scenario-btn" data-mode="analysis">情景三</button>
+            <button class="scenario-btn" data-mode="inspiration">情景四</button>
+            <button class="scenario-btn" data-mode="learning">情景五</button>
+            <button class="scenario-btn" data-mode="translation">情景六</button>
+            <button class="scenario-btn" data-mode="imitation">情景七</button>
+            <button class="scenario-btn" data-mode="reflection">情景八</button>
+        </div>
+        
+        <div class="content-layout">
+            <div id="scene-container"></div>
+            
+            <div class="info-panel">
+                <div id="mode-title" class="mode-title">创作生成模式</div>
+                <div id="mode-description" class="mode-description">
+                    让大模型按照要求生成任意规则的文字、图像声音等素材
+                </div>
+                <div id="mode-dimensions" class="mode-dimensions">
+                    模型内部知识 × 你知道怎么做 × 确定性内容
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
